@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DomiCity — 21 años de experiencia en soluciones tecnológicas corporativas." />
+  <title>Nosotros — DomiCity</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" />
+</head>
+<body>
+  <!--  NAVBAR   -->
+  <header class="navbar" role="banner">
+    <a href="index.html" class="navbar__logo" aria-label="DomiCity — Inicio">
+        <img src="assets/img/logo_domicity.png" alt="DomiCity" loading="eager" />
+    </a>
+    <div class="navbar__inner">
+      <button class="navbar__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="main-menu" class="navbar__menu" role="navigation" aria-label="Menú principal">
+        <a href="index.html" class="navbar__link">Servicios</a>
+        <a href="nosotros.html" class="navbar__link">Nosotros</a>
+        <a href="contacto.html" class="navbar__link">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!--  PAGE HEADER  -->
+    <section class="page-header" aria-label="Cabecera de sección">
+      <h1 class="page-header__title fade-in-up">Sobre Nosotros</h1>
+    </section>
+
+    <!--  ABOUT CONTENT  -->
+    <section class="section" aria-labelledby="about-title">
+      <div class="about__body" style="max-width:1100px;margin:0 auto;">
+
+        <p class="about__text" data-animate>
+          DomiCity es una compañía con 21 años de servicio, especializada en el desarrollo de soluciones tecnológicas corporativas transaccionales o no transaccionales, a través de chatbots, aplicaciones, páginas web, telefonía y software a la medida.
+        </p>
+
+        <p class="about__text" data-animate>
+          Algunos de los clientes que han confiado en nuestros servicios:
+        </p>
+
+        <!-- Logo slider -->
+        <div class="logo-slider" data-animate role="region" aria-label="Clientes que confían en DomiCity">
+          <button class="logo-slider__btn logo-slider__btn--prev" aria-label="Anterior">&#8249;</button>
+
+          <div class="logo-slider__track" role="list">
+
+            <div class="logo-slider__item" role="listitem">
+              <img src="assets/img/logo-visa.svg" alt="VISA" loading="lazy" />
+            </div>
+
+            <div class="logo-slider__item" role="listitem">
+              <img src="assets/img/logo-3chotels.svg" alt="3C Hotels" loading="lazy" />
+            </div>
+
+            <div class="logo-slider__item" role="listitem">
+              <img src="assets/img/logo-papajohns.svg" alt="Papa Johns" loading="lazy" />
+            </div>
+
+            <div class="logo-slider__item" role="listitem">
+              <img src="assets/img/logo-pizzahut.svg" alt="Pizza Hut" loading="lazy" />
+            </div>
+
+            <div class="logo-slider__item" role="listitem">
+              <img src="assets/img/logo-farmatodo.svg" alt="Farmatodo" loading="lazy" />
+            </div>
+
+            <!-- Duplicate for infinite loop feel -->
+            <div class="logo-slider__item" role="listitem" aria-hidden="true">
+              <img src="assets/img/logo-visa.svg" alt="" loading="lazy" />
+            </div>
+            <div class="logo-slider__item" role="listitem" aria-hidden="true">
+              <img src="assets/img/logo-3chotels.svg" alt="" loading="lazy" />
+            </div>
+            <div class="logo-slider__item" role="listitem" aria-hidden="true">
+              <img src="assets/img/logo-papajohns.svg" alt="" loading="lazy" />
+            </div>
+
+          </div>
+
+          <button class="logo-slider__btn logo-slider__btn--next" aria-label="Siguiente">&#8250;</button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!--  FOOTER                                 -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__links">
+        <a href="#" class="footer__link">Términos de Servicio</a>
+        <a href="#" class="footer__link">Política de Privacidad</a>
+      </div>
+
+      <address class="footer__contact" style="font-style:normal;">
+        <span>PBX 601 6004640</span>
+        <span>Calle 23 #86A - 49&nbsp;&nbsp;Bogotá, Colombia</span>
+      </address>
+
+      <div class="footer__social" aria-label="Redes sociales">
+        <a href="#" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener">
+          <img src="assets/img/Icono Facebook.svg" alt="Facebook" loading="lazy" />
+        </a>
+        <a href="#" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+          <img src="assets/img/Icono Instagram.svg" alt="Instagram" loading="lazy" />
+        </a>
+        <a href="#" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <img src="assets/img/Icono Linkedin.svg" alt="LinkedIn" loading="lazy" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contácta a DomiCity — Formulario de contacto y WhatsApp." />
+  <title>Contacto — DomiCity</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" />
+</head>
+<body>
+  <!--  NAVBAR   -->
+  <header class="navbar" role="banner">
+    <a href="index.html" class="navbar__logo" aria-label="DomiCity — Inicio">
+        <img src="assets/img/logo_domicity.png" alt="DomiCity" loading="eager" />
+    </a>
+    <div class="navbar__inner">
+      <button class="navbar__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="main-menu" class="navbar__menu" role="navigation" aria-label="Menú principal">
+        <a href="index.html" class="navbar__link">Servicios</a>
+        <a href="nosotros.html" class="navbar__link">Nosotros</a>
+        <a href="contacto.html" class="navbar__link">Contacto</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!--  PAGE HEADER  -->
+    <div class="contact__header-bg">
+      <h1 class="contact__title fade-in-up">Contacto</h1>
+    </div>
+
+    <!-- Wave separator -->
+    <svg class="contact__wave" viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,50 C480,110 960,0 1440,60 L1440,90 L0,90 Z" fill="#ffffff"/>
+    </svg>
+    <!--  CONTACT BODY -->
+    <section class="contact__body" aria-labelledby="contact-title">
+
+      <!-- Form -->
+      <div class="contact__form-wrapper" data-animate>
+        <div class="form__success" role="alert">
+          ✅ ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.
+        </div>
+        <div class="form__failure" role="alert">
+          ❌ Ocurrió un error al enviar el mensaje. Por favor intenta de nuevo.
+        </div>
+
+        <form
+          id="contactForm"
+          method="POST"
+          action="private/form-handler.php"
+          novalidate
+          aria-label="Formulario de contacto"
+        >
+          <div class="form__group">
+            <label for="nombre" class="sr-only">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              class="form__input"
+              placeholder="Nombre..."
+              autocomplete="name"
+            />
+            <span id="nombre-error" class="form__error" role="alert"></span>
+          </div>
+
+          <div class="form__group">
+            <label for="cargo" class="sr-only">Cargo</label>
+            <input
+              type="text"
+              id="cargo"
+              name="cargo"
+              class="form__input"
+              placeholder="Cargo..."
+              autocomplete="organization-title"
+            />
+          </div>
+
+          <div class="form__group">
+            <label for="empresa" class="sr-only">Empresa</label>
+            <input
+              type="text"
+              id="empresa"
+              name="empresa"
+              class="form__input"
+              placeholder="Empresa..."
+              autocomplete="organization"
+            />
+            <span id="empresa-error" class="form__error" role="alert"></span>
+          </div>
+
+          <div class="form__group">
+            <label for="correo" class="sr-only">Correo electrónico</label>
+            <input
+              type="email"
+              id="correo"
+              name="correo"
+              class="form__input"
+              placeholder="Correo Electrónico..."
+              autocomplete="email"
+            />
+            <span id="correo-error" class="form__error" role="alert"></span>
+          </div>
+
+          <div class="form__group">
+            <label for="fija" class="sr-only">Línea fija</label>
+            <input
+              type="tel"
+              id="fija"
+              name="fija"
+              class="form__input"
+              placeholder="Línea Fija..."
+              autocomplete="tel"
+            />
+          </div>
+
+          <div class="form__group">
+            <label for="movil" class="sr-only">Línea móvil</label>
+            <input
+              type="tel"
+              id="movil"
+              name="movil"
+              class="form__input"
+              placeholder="Línea Móvil..."
+              autocomplete="tel"
+            />
+            <span id="movil-error" class="form__error" role="alert"></span>
+          </div>
+
+          <div class="form__group">
+            <label for="observaciones" class="sr-only">Observaciones</label>
+            <textarea
+              id="observaciones"
+              name="observaciones"
+              class="form__textarea"
+              placeholder="Observaciones..."
+              rows="5"
+            ></textarea>
+          </div>
+
+          <div class="form__footer">
+            <button type="submit" class="btn btn--primary">Enviar</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- WhatsApp aside -->
+      <aside class="contact__aside" data-animate aria-label="Contacto por WhatsApp">
+        <p class="contact__aside-title">Contácta por</p>
+        <a
+          href="https://wa.me/576016004640"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn--whatsapp btn--whatsapp-lg"
+          aria-label="Contactar por WhatsApp"
+        >
+          <img src="assets/img/whatsapp-icon.svg" alt="" aria-hidden="true" />
+          WhatsApp
+        </a>
+      </aside>
+
+    </section>
+  </main>
+
+  <!--  FOOTER   -->
+    
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__links">
+        <a href="#" class="footer__link">Términos de Servicio</a>
+        <a href="#" class="footer__link">Política de Privacidad</a>
+      </div>
+
+      <address class="footer__contact" style="font-style:normal;">
+        <span>PBX 601 6004640</span>
+        <span>Calle 23 #86A - 49&nbsp;&nbsp;Bogotá, Colombia</span>
+      </address>
+
+      <div class="footer__social" aria-label="Redes sociales">
+        <a href="#" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener">
+          <img src="assets/img/Icono Facebook.svg" alt="Facebook" loading="lazy" />
+        </a>
+        <a href="#" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+          <img src="assets/img/Icono Instagram.svg" alt="Instagram" loading="lazy" />
+        </a>
+        <a href="#" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <img src="assets/img/Icono Linkedin.svg" alt="LinkedIn" loading="lazy" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Visually hidden label helper -->
+  <style>
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
