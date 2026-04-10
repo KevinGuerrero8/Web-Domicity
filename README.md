@@ -30,14 +30,14 @@ Sitio web corporativo moderno, responsive y optimizado para DomiCity.
 │       ├── Icono Instagram.png
 │       ├── Icono Linkedin.png
 │       ├── whatsapp-icon.svg
-│       ├── logo-visa.png       ← Agregar manualmente
-│       ├── logo-3chotels.png   ← Agregar manualmente
-│       ├── logo-papajohns.png  ← Agregar manualmente
-│       ├── logo-pizzahut.png   ← Agregar manualmente
-│       └── logo-farmatodo.png  ← Agregar manualmente
+│       ├── logo-visa.png       
+│       ├── logo-3chotels.png   
+│       ├── logo-papajohns.png 
+│       ├── logo-pizzahut.png  
+│       └── logo-farmatodo.png  
 │
 ├── /private
-│   └── form-handler.php  ← Backend PHP para el formulario
+│   └── form-handler.php  
 │
 └── README.md
 ```
