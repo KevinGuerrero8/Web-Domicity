@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DomiCity</title>
+    <link rel="icon" href="assets/img/logo_domicity.png" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+        font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .content {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .title {
+            font-size: 3.5rem;
+            color: #e31e24;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 2rem;
+            color: #e31e24;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+
+        .subtitle-bold {
+            font-size: 2rem;
+            color: #e31e24;
+            font-weight: 700;
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+
+        .tagline {
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: 900;
+        font-style: italic;
+        font-size: 1.8rem;
+        color: #6f5f60;
+        margin-top: 30px;
+        letter-spacing: 0.5px;
+        }
+
+
+        .illustration {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 500px;
+        }
+
+        .maintenance-image {
+            max-width: 100%;
+            height: auto;
+            max-height: 600px;
+            object-fit: contain;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 968px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .content {
+                max-width: 100%;
+            }
+            
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle,
+            .subtitle-bold {
+                font-size: 1.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.3rem;
+            }
+            
+            .maintenance-image {
+                max-width: 90%;
+                max-height: 350px;
+            }
+        }
+    </style>
+    <meta name="description" content="En Domcity transformamos tu negocio con tecnología: chatbots, páginas web, apps, telefonía IP y software personalizado. 21 años impulsando la innovación en Colombia.">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 class="title">¡No te vayas lejos!</h1>
+            <p class="subtitle">Estamos actualizando el sitio</p>
+            <p class="subtitle-bold">para hacerlo aún más increíble</p>
+            <p class="tagline">Domicity tú aliado tecnológico</p>
+        </div>
+        
+        <div class="illustration">
+            <img src="assets/img/fot2.png" alt="DomiCity Mantenimiento" class="maintenance-image">
+        </div>
+    </div>
+    
+    <script>
+
+        // Animación de entrada suave para los elementos
+        document.addEventListener('DOMContentLoaded', function() {
+            const content = document.querySelector('.content');
+            const illustration = document.querySelector('.illustration');
+            
+            // Fade in inicial
+            content.style.opacity = '0';
+            illustration.style.opacity = '0';
+            content.style.transform = 'translateX(-50px)';
+            illustration.style.transform = 'translateX(50px)';
+            content.style.transition = 'all 1s ease-out';
+            illustration.style.transition = 'all 1s ease-out';
+            
+            setTimeout(() => {
+                content.style.opacity = '1';
+                illustration.style.opacity = '1';
+                content.style.transform = 'translateX(0)';
+                illustration.style.transform = 'translateX(0)';
+            }, 100);
+        });
+
+        // Efecto parallax suave en el movimiento del mouse
+        document.addEventListener('mousemove', function(e) {
+            const gears = document.querySelectorAll('.gear');
+            const cone = document.querySelector('.cone');
+            const browserWindow = document.querySelector('.browser-window');
+            
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            gears.forEach((gear, index) => {
+                const speed = (index + 1) * 10;
+                const x = (mouseX - 0.5) * speed;
+                const y = (mouseY - 0.5) * speed;
+                gear.style.transform = `translate(${x}px, ${y}px) rotate(${gear.style.transform.match(/rotate\((.*?)\)/) || '0deg'})`;
+            });
+            
+            if (cone) {
+                const x = (mouseX - 0.5) * 15;
+                const y = (mouseY - 0.5) * 15;
+                cone.style.transform = `translate(${x}px, ${y}px)`;
+            }
+            
+            if (browserWindow) {
+                const x = (mouseX - 0.5) * 8;
+                const y = (mouseY - 0.5) * 8;
+                browserWindow.style.transform = `translate(${x}px, ${y}px)`;
+            }
+        });
+
+        // Animación adicional en la barra de carga
+        const loadingBar = document.querySelector('.loading-bar');
+        if (loadingBar) {
+            let progress = 0;
+            setInterval(() => {
+                progress = (progress + 1) % 101;
+                const color = `hsl(${progress * 1.2}, 80%, 50%)`;
+                loadingBar.style.setProperty('--progress-color', color);
+            }, 50);
+        }
+
+    </script>
+</body>
+</html>
