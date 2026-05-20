@@ -922,6 +922,11 @@ ul {
     height: 80px;
   }
 
+  /* Brand Carousel — 2 visibles en mobile */
+  .brand-carousel__slide {
+    flex: 0 0 50%;
+  }
+
   /* About */
   .about__header {
     padding: 40px 20px 100px;
@@ -1000,6 +1005,89 @@ ul {
   }
 }
 
+/* ─── BRAND CAROUSEL ────────────────────────── */
+.brand-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  margin-bottom: 36px;
+  user-select: none;
+}
+
+.brand-carousel__viewport {
+  overflow: hidden;
+  flex: 1;
+}
+
+.brand-carousel__track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.brand-carousel__slide {
+  flex: 0 0 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+}
+
+.brand-carousel__slide img {
+  max-height: 110px;
+  max-width: 180px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-carousel__btn {
+  background: none;
+  border: 2px solid var(--color-border);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: var(--color-text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
+}
+
+.brand-carousel__btn:hover {
+  background: var(--color-border);
+  border-color: var(--color-primary-red);
+  color: var(--color-primary-red);
+}
+
+.brand-carousel__dots {
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.brand-carousel__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-border);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background var(--transition);
+}
+
+.brand-carousel__dot.is-active {
+  background: var(--color-primary-red);
+}
+
 /* ── Small mobile (≤ 480px) ── */
 @media (max-width: 480px) {
   .hero {
@@ -1029,6 +1117,11 @@ ul {
 
   .clients-marquee__item {
     height: 64px;
+  }
+
+  /* Brand Carousel — 1 visible en móvil pequeño */
+  .brand-carousel__slide {
+    flex: 0 0 100%;
   }
 
   .contact__form-wrapper {

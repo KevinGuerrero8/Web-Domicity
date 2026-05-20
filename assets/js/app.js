@@ -117,6 +117,66 @@
     });
   }
 
+  /* ─── BRAND CAROUSEL ───────────────────── */
+  const brandCarousel = document.querySelector('.brand-carousel');
+
+  if (brandCarousel) {
+    const carTrack    = brandCarousel.querySelector('.brand-carousel__track');
+    const carSlides   = Array.from(brandCarousel.querySelectorAll('.brand-carousel__slide'));
+    const carPrev     = brandCarousel.querySelector('.brand-carousel__btn--prev');
+    const carNext     = brandCarousel.querySelector('.brand-carousel__btn--next');
+    const carDotsCont = brandCarousel.querySelector('.brand-carousel__dots');
+    const n           = carSlides.length;
+    let carIndex = 0;
+
+    function getVisible() {
+      const vw = brandCarousel.querySelector('.brand-carousel__viewport').offsetWidth;
+      const sw = carSlides[0].offsetWidth;
+      return sw > 0 ? Math.round(vw / sw) : 1;
+    }
+
+    function buildDots() {
+      carDotsCont.innerHTML = '';
+      const max = Math.max(0, n - getVisible());
+      for (let i = 0; i <= max; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'brand-carousel__dot' + (i === carIndex ? ' is-active' : '');
+        dot.setAttribute('aria-label', `Ir a posición ${i + 1}`);
+        dot.addEventListener('click', () => carGoTo(i));
+        carDotsCont.appendChild(dot);
+      }
+    }
+
+    function carGoTo(index) {
+      const max = Math.max(0, n - getVisible());
+      if (index < 0)    carIndex = max;
+      else if (index > max) carIndex = 0;
+      else              carIndex = index;
+      // translateX % is relative to the track itself; each slide = 100/n % of track
+      carTrack.style.transform = `translateX(-${carIndex * (100 / n)}%)`;
+      Array.from(carDotsCont.querySelectorAll('.brand-carousel__dot'))
+        .forEach((d, i) => d.classList.toggle('is-active', i === carIndex));
+    }
+
+    buildDots();
+
+    carPrev && carPrev.addEventListener('click', () => carGoTo(carIndex - 1));
+    carNext && carNext.addEventListener('click', () => carGoTo(carIndex + 1));
+
+    let carTimer = setInterval(() => carGoTo(carIndex + 1), 3000);
+
+    brandCarousel.addEventListener('mouseenter', () => clearInterval(carTimer));
+    brandCarousel.addEventListener('mouseleave', () => {
+      carTimer = setInterval(() => carGoTo(carIndex + 1), 3000);
+    });
+
+    window.addEventListener('resize', () => {
+      carIndex = 0;
+      carTrack.style.transform = 'translateX(0)';
+      buildDots();
+    });
+  }
+
   /* ─── CONTACT FORM VALIDATION ───────────── */
   const form = document.getElementById('contactForm');
 

@@ -6,7 +6,7 @@
   <meta name="description" content="DomiCity — 21 años de experiencia en soluciones tecnológicas corporativas." />
   <title>Nosotros — DomiCity</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="icon" href="assets/img/favicon.png" type="image/png" />
+  <link rel="icon" href="assets/img/logo_domicity.png" type="image/png" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YCQ2FPRDF"></script>
   <script>
@@ -28,7 +28,7 @@
       </button>
 
       <nav id="main-menu" class="navbar__menu" role="navigation" aria-label="Menú principal">
-        <a href="index.html" class="navbar__link">Servicios</a>
+        <a href="index.html#servicios" class="navbar__link">Servicios</a>
         <a href="nosotros.html" class="navbar__link">Nosotros</a>
         <a href="https://wa.me/573166936965?text=Hola%2C%20quiero%20tener%20mas%20informacion%20acerca%20de%20Domicity" class="navbar__link">Contacto</a>
       </nav>
@@ -53,30 +53,23 @@
           Algunos de los clientes que han confiado en nuestros servicios:
         </p>
 
-        <!-- Clients marquee -->
-        <div class="clients-marquee" data-animate role="region" aria-label="Clientes que confían en DomiCity">
-          <div class="clients-marquee__fade clients-marquee__fade--left" aria-hidden="true"></div>
-          <div class="clients-marquee__fade clients-marquee__fade--right" aria-hidden="true"></div>
-          <div class="clients-marquee__track">
-            <!-- Original set -->
-            <div class="clients-marquee__item"><img src="assets/img/KFC.png" alt="KFC" loading="lazy" /></div>
-            <div class="clients-marquee__item"><img src="assets/img/CC Avenida chile.png" alt="CC Avenida Chile" loading="lazy" /></div>
-            <div class="clients-marquee__item"><img src="assets/img/Santa Reyes.png" alt="Santa Reyes" loading="lazy" /></div>
-            <div class="clients-marquee__item"><img src="assets/img/Yanuba.png" alt="Yanuba" loading="lazy" /></div>
-            <div class="clients-marquee__item"><img src="assets/img/Da Quei Matti.png" alt="Da Quei Matti" loading="lazy" /></div>
-            <div class="clients-marquee__item"><img src="assets/img/3c hotels.png" alt="3C Hotels" loading="lazy" /></div>
-            <div class="clients-marquee__item"><img src="assets/img/La Hamburgueseria.png" alt="La Hamburgueseria" loading="lazy" /></div>
-            <div class="clients-marquee__item"><img src="assets/img/Pan pa' ya!.png" alt="Pan pa' ya!" loading="lazy" /></div>
-            <!-- Duplicate set for seamless loop -->
-            <div class="clients-marquee__item" aria-hidden="true"><img src="assets/img/KFC.png" alt="" loading="lazy" /></div>
-            <div class="clients-marquee__item" aria-hidden="true"><img src="assets/img/CC Avenida chile.png" alt="" loading="lazy" /></div>
-            <div class="clients-marquee__item" aria-hidden="true"><img src="assets/img/Santa Reyes.png" alt="" loading="lazy" /></div>
-            <div class="clients-marquee__item" aria-hidden="true"><img src="assets/img/Yanuba.png" alt="" loading="lazy" /></div>
-            <div class="clients-marquee__item" aria-hidden="true"><img src="assets/img/Da Quei Matti.png" alt="" loading="lazy" /></div>
-            <div class="clients-marquee__item" aria-hidden="true"><img src="assets/img/3c hotels.png" alt="" loading="lazy" /></div>
-            <div class="clients-marquee__item" aria-hidden="true"><img src="assets/img/La Hamburgueseria.png" alt="" loading="lazy" /></div>
-            <div class="clients-marquee__item" aria-hidden="true"><img src="assets/img/Pan pa' ya!.png" alt="" loading="lazy" /></div>
+        <!-- Brand carousel -->
+        <div class="brand-carousel" data-animate role="region" aria-label="Clientes que confían en DomiCity">
+          <button class="brand-carousel__btn brand-carousel__btn--prev" aria-label="Marca anterior">&#8249;</button>
+          <div class="brand-carousel__viewport">
+            <div class="brand-carousel__track">
+              <div class="brand-carousel__slide"><img src="assets/img/KFC.png" alt="KFC" loading="lazy" /></div>
+              <div class="brand-carousel__slide"><img src="assets/img/CC Avenida chile.png" alt="CC Avenida Chile" loading="lazy" /></div>
+              <div class="brand-carousel__slide"><img src="assets/img/Santa Reyes.png" alt="Santa Reyes" loading="lazy" /></div>
+              <div class="brand-carousel__slide"><img src="assets/img/Yanuba.png" alt="Yanuba" loading="lazy" /></div>
+              <div class="brand-carousel__slide"><img src="assets/img/Da Quei Matti.png" alt="Da Quei Matti" loading="lazy" /></div>
+              <div class="brand-carousel__slide"><img src="assets/img/3c hotels.png" alt="3C Hotels" loading="lazy" /></div>
+              <div class="brand-carousel__slide"><img src="assets/img/La Hamburgueseria.png" alt="La Hamburgueseria" loading="lazy" /></div>
+              <div class="brand-carousel__slide"><img src="assets/img/Pan pa' ya!.png" alt="Pan pa' ya!" loading="lazy" /></div>
+            </div>
           </div>
+          <button class="brand-carousel__btn brand-carousel__btn--next" aria-label="Siguiente marca">&#8250;</button>
+          <div class="brand-carousel__dots" aria-hidden="true"></div>
         </div>
 
       </div>
@@ -97,14 +90,14 @@
       </address>
 
       <div class="footer__social" aria-label="Redes sociales">
-        <a href="#" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener">
-          <img src="assets/img/Icono Facebook.svg" alt="Facebook" loading="lazy" />
+        <a href="https://www.facebook.com/domicitylaciudad" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener">
+          <img src="assets/img/Icono Facebook.png" alt="Facebook" loading="lazy" />
         </a>
-        <a href="#" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
-          <img src="assets/img/Icono Instagram.svg" alt="Instagram" loading="lazy" />
+        <a href="https://www.instagram.com/domicity.co/" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+          <img src="assets/img/Icono Instagram.png" alt="Instagram" loading="lazy" />
         </a>
-        <a href="#" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
-          <img src="assets/img/Icono Linkedin.svg" alt="LinkedIn" loading="lazy" />
+        <a href="https://www.linkedin.com/company/domicity-sas/" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <img src="assets/img/Icono Linkedin.png" alt="LinkedIn" loading="lazy" />
         </a>
       </div>
     </div>
