@@ -172,7 +172,7 @@ ul {
 
 /* ─── HERO ──────────────────────────────────── */
 .hero {
-  background-image: url("../img/Banner\ Pagina\ Web.jpg");
+  background-image: url("../img/Banner\ Pagina\ Web.png");
   background-size: cover;          /* Hace que la imagen cubra todo el contenedor */
   background-position: center;     /* Centra la imagen */
   background-repeat: no-repeat;    /* Evita que se repita */
@@ -861,7 +861,7 @@ ul {
     padding-top: 120px;
     background-image:
       linear-gradient(rgba(10, 0, 0, 0.55), rgba(10, 0, 0, 0.55)),
-      url("../img/Banner\ Pagina\ Web.jpg");
+      url("../img/Banner\ Pagina\ Web.png");
     background-position: center center;
   }
 
