@@ -1,0 +1,16 @@
+Options -Indexes
+
+# Redireccionamientos 301 - páginas del sitio anterior
+Redirect 301 /trabaja/ https://domicity.com.co/nosotros.html
+Redirect 301 /trabaja https://domicity.com.co/nosotros.html
+Redirect 301 /call-center/ https://domicity.com.co/
+Redirect 301 /call-center https://domicity.com.co/
+
+# Forzar HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Forzar sin www
+RewriteCond %{HTTP_HOST} ^www\.domicity\.com\.co [NC]
+RewriteRule ^(.*)$ https://domicity.com.co/$1 [L,R=301]
