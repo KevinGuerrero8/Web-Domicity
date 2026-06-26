@@ -167,7 +167,7 @@
 
     brandCarousel.addEventListener('mouseenter', () => clearInterval(carTimer));
     brandCarousel.addEventListener('mouseleave', () => {
-      carTimer = setInterval(() => carGoTo(carIndex + 1), 2000);
+      carTimer = setInterval(() => carGoTo(carIndex + 1), 1000);
     });
 
     window.addEventListener('resize', () => {
