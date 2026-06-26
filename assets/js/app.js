@@ -163,11 +163,11 @@
     carPrev && carPrev.addEventListener('click', () => carGoTo(carIndex - 1));
     carNext && carNext.addEventListener('click', () => carGoTo(carIndex + 1));
 
-    let carTimer = setInterval(() => carGoTo(carIndex + 1), 3000);
+    let carTimer = setInterval(() => carGoTo(carIndex + 1), 2000);
 
     brandCarousel.addEventListener('mouseenter', () => clearInterval(carTimer));
     brandCarousel.addEventListener('mouseleave', () => {
-      carTimer = setInterval(() => carGoTo(carIndex + 1), 3000);
+      carTimer = setInterval(() => carGoTo(carIndex + 1), 2000);
     });
 
     window.addEventListener('resize', () => {
